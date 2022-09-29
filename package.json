@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "webpack --mode development && webpack serve --mode development",
-    "build": "webpack serve --mode production"
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",

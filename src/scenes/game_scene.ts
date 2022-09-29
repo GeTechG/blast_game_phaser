@@ -22,6 +22,7 @@ export default class GameScene extends Phaser.Scene {
     private statisticPanel: StatisticPanel;
     private _gameActive: boolean;
     private cheatBomb: CheatButton;
+    private cheatReroll: CheatButton;
     private _usedCheat: Cheat;
 
     constructor() {
@@ -38,6 +39,7 @@ export default class GameScene extends Phaser.Scene {
         CheatButton.loadTextures(this);
 
         this.load.image("bomb", "assets/bomb.png");
+        this.load.image("reroll", "assets/reroll.png");
     }
 
     create(): void {
@@ -62,8 +64,11 @@ export default class GameScene extends Phaser.Scene {
         this.statisticPanel.setTargetScores(this.scoresToWin);
         this.statisticPanel.setScores(this.scores);
 
-        this.cheatBomb = new CheatButton(this, 850, 570,  "bomb", 1, () => {
+        this.cheatBomb = new CheatButton(this, 780, 570,  "bomb", 1, () => {
             this._usedCheat = Cheat.Bomb;
+        });
+        this.cheatReroll = new CheatButton(this, 950, 570,  "reroll", 2, () => {
+            this.area.fillArea();
         });
     }
 

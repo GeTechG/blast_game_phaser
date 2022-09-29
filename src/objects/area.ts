@@ -67,6 +67,7 @@ export default class Area extends Container {
 
     public fillArea() {
         this.blocks = [];
+        this.blocksContainer.removeAll(true);
         for (let y = 0; y < AREA_HEIGHT; y++) {
             for (let x = 0; x < AREA_WIDTH; x++) {
                 let block = this.createBlock(x, y);

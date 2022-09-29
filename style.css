@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Marvin';
+    src: url('assets/fonts/Marvin.eot');
+    src: url('assets/fonts/Marvin.eot') format('embedded-opentype'),
+    url('assets/fonts/Marvin.woff2') format('woff2'),
+    url('assets/fonts/Marvin.woff') format('woff'),
+    url('assets/fonts/Marvin.ttf') format('truetype')
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
